@@ -1,0 +1,8 @@
+PROG  START  2000
+-     LDA    NUM1
+-     MUL    NUM2
+-     STA    RESULT
+NUM1  WORD   6
+NUM2  WORD   4
+RESULT RESW  1
+-     END    PROG
