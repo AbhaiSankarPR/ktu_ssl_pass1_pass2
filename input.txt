@@ -1,8 +1,8 @@
-PROG  START  2000
--     LDA    NUM1
--     MUL    NUM2
--     STA    RESULT
-NUM1  WORD   6
-NUM2  WORD   4
-RESULT RESW  1
--     END    PROG
+PGM1    START   1000
+        LDA     ALPHA
+        MUL     BETA
+        STA     GAMMA
+ALPHA   WORD    2
+BETA    WORD    9
+GAMMA   RESW    1
+        END     1000
