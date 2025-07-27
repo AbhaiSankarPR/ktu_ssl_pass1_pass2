@@ -9,7 +9,7 @@ int main() {
 
     fin = fopen("input.txt", "r");
     if (fin == NULL) {
-        printf("❌ Error: Cannot open input file.\n");
+        printf("Error: Cannot open input file.\n");
         return 1;
     }
 
@@ -25,10 +25,10 @@ int main() {
     if (strcmp(opcode, "START") == 0) {
         sscanf(operand, "%X", &startAddr);
         addr = startAddr;
-        printf("✅ START at address %04X\n", addr);
+        printf("START at address %04X\n", addr);
         fprintf(finter, "%04X\t%s\t%s\t%s\n", addr, label, opcode, operand);
     } else {
-        printf("⚠️  Warning: START directive missing. Assuming address 0000.\n");
+        printf(" Warning: START directive missing. Assuming address 0000.\n");
         addr = 0;
     }
 
@@ -80,7 +80,7 @@ int main() {
 
     // Calculate length
     length = addr - startAddr;
-    printf("📏 Program length = %d (decimal) / %04X (hex)\n", length, length);
+    printf("Program length = %d (decimal) / %04X (hex)\n", length, length);
     fprintf(flen, "%d", length);
 
     // Close all files
@@ -89,6 +89,6 @@ int main() {
     fclose(flen);
     fclose(finter);
 
-    printf("✅ Pass 1 completed successfully.\n");
+    printf("Pass 1 completed successfully.\n");
     return 0;
 }

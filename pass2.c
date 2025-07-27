@@ -60,7 +60,7 @@ int main() {
     fscanf(flen, "%d", &length);
 
     // Write header record
-    fprintf(fout, "H^%s^%06X^%06X\n", programName, startAddr, length);
+fprintf(fout, "H^%-6s^%06X^%06X\n", programName, startAddr, length);
 
     // Begin Text record
     int textStartAddr = startAddr;
@@ -115,6 +115,6 @@ int main() {
     fclose(fout);
     fclose(flen);
 
-    printf("✅ Pass 2 completed. Check output.txt for object code.\n");
+    printf("Pass 2 completed. Check output.txt for object code.\n");
     return 0;
 }
